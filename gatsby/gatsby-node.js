@@ -16,7 +16,7 @@ exports.createPages = ({ graphql, actions }) => {
             node {
               frontmatter {
                 title
-                path
+                slug
               }
             }
           }
@@ -33,12 +33,24 @@ exports.createPages = ({ graphql, actions }) => {
 
     posts.forEach((post, index) => {
       createPage({
-        path: post.node.frontmatter.path,
+        path: post.node.frontmatter.slug,
         component: blogPost,
         context: {
-          path: post.node.frontmatter.path
+          slug: post.node.frontmatter.slug
         }
       });
     });
   });
+};
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
+
+  if (node.internal.type === `MarkdownRemark`) {
+    createNodeField({
+      name: `slug`,
+      node,
+      value: node.frontmatter.slug
+    });
+  }
 };

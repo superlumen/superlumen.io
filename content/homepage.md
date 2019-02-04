@@ -1,7 +1,7 @@
 ---
 title: Home
 date: "2019-02-04T15:08:00.000Z"
-path: /
+slug: /
 ---
 Hello
 
