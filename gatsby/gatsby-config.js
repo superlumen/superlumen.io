@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `superlumen  `,
-    author: `Kyle Mathews`,
+    title: `superlumen`,
+    author: `Callum Macdonald`,
     description: `Rapid web and mobile app development`,
     siteUrl: `https://superlumen.io`,
     social: {
