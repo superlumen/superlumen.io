@@ -1,3 +1,8 @@
+---
+title: Home
+date: "2019-02-04T15:08:00.000Z"
+path: /
+---
 Hello
 
 You have an idea.
